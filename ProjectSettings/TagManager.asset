@@ -6,11 +6,12 @@ TagManager:
   tags:
   - ContinueButton
   - Button
+  - Knife
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Sliceable
   - Water
   - UI
   - 
