@@ -10,7 +10,7 @@ public class WelcomeManager : MonoBehaviour
     public Transform vrCamera; // Drag the VR camera here
     public XRBaseInteractor leftController; // Drag the Left Controller here
     public XRBaseInteractor rightController; // Drag the Right Controller here
-    public Vector3 desiredPosition = new Vector3(0.45f, 1f, 0.9f); // Set your desired position here
+    public Vector3 desiredPosition = new Vector3(0.45f, 1f, 1.075f); // Set your desired position here
     public Vector3 desiredScale = new Vector3(0.002f, 0.002f, 0.002f); // Set your desired scale here
     public Color hoverColor = Color.red; // Set your desired hover color here
     private Color originalColor;
@@ -22,6 +22,7 @@ public class WelcomeManager : MonoBehaviour
     {
         // Ensure the welcomeCanvas is active at the start
         welcomeCanvas.SetActive(true);
+        //continueButton.gameObject.SetActive(true);
         nextObj.SetActive(false);
 
         // Position and scale the Canvas in front of the VR camera
@@ -76,6 +77,12 @@ public class WelcomeManager : MonoBehaviour
     {
         // Hide the welcomeCanvas when the button is clicked
         welcomeCanvas.SetActive(false);
+        // Disable the button's collider to prevent it from being interactable
+        var buttonCollider = continueButton.GetComponent<Collider>();
+        if (buttonCollider != null)
+        {
+            buttonCollider.enabled = false;
+        }
         nextObj.SetActive(true);
     }
 
@@ -138,16 +145,4 @@ public class WelcomeManager : MonoBehaviour
             lineVisual.enabled = false;
         }
     }
-    // void OnDestroy()
-    // {
-    //     leftController.selectEntered.RemoveListener(OnSelectEnter);
-    //     rightController.selectEntered.RemoveListener(OnSelectEnter);
-
-    //     var interactable = continueButton.GetComponent<XRGrabInteractable>();
-    //     if (interactable != null)
-    //     {
-    //         interactable.hoverEntered.RemoveListener(OnHoverEnter);
-    //         interactable.hoverExited.RemoveListener(OnHoverExit);
-    //     }
-    // }
 }

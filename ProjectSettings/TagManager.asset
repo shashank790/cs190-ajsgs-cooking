@@ -7,6 +7,10 @@ TagManager:
   - ContinueButton
   - Button
   - Knife
+  - Soup
+  - tomatos
+  - greens
+  - carrots
   layers:
   - Default
   - TransparentFX

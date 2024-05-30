@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using EzySlice;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class BreadSlicer : MonoBehaviour
 {
@@ -69,6 +70,13 @@ public class BreadSlicer : MonoBehaviour
         Rigidbody rb = hull.AddComponent<Rigidbody>();
         rb.mass = 1f; // Adjust mass as necessary
 
-        // Optionally, add any other components you need, such as scripts for further interactions
+        // Add the XRGrabInteractable component
+        XRGrabInteractable grabInteractable = hull.AddComponent<XRGrabInteractable>();
+
+        // Add the BreadSlicer script to allow further slicing
+        BreadSlicer breadSlicer = hull.AddComponent<BreadSlicer>();
+        breadSlicer.crossSectionMaterial = crossSectionMaterial;
+        breadSlicer.knife = knife;
+        // Optionally, copy any other necessary settings from the original bread object
     }
 }
