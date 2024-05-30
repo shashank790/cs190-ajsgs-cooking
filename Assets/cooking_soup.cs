@@ -15,6 +15,7 @@ public class cooking_soup : MonoBehaviour
     public GameObject carrotsCollisionObject;
     public GameObject tomatosCollisionObject;
     public GameObject greensCollisionObject;
+    public GameObject choppingBoard;
 
     void Start()
     {
@@ -27,8 +28,11 @@ public class cooking_soup : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        // Check if the colliding object is the soup object
-        if (collision.gameObject == soupCollisionObject)
+        // Check if the chopping board has the correct x rotation
+        float boardXRotation = choppingBoard.transform.eulerAngles.x;
+        bool isBoardTilted = boardXRotation >= 20f || boardXRotation <= 340f;
+
+        if (collision.gameObject == soupCollisionObject && isBoardTilted)
         {
             Debug.Log("I GOT MF SOUP");
             SoupObject.SetActive(true);
@@ -36,26 +40,30 @@ public class cooking_soup : MonoBehaviour
             canvasOn.SetActive(true);
         }
 
-        // Check if the colliding object is the carrots object
-        if (collision.gameObject == carrotsCollisionObject)
+        if (collision.gameObject == carrotsCollisionObject && isBoardTilted)
         {
             Debug.Log("carrot");
             carrotsObject.SetActive(true);
         }
 
-        // Check if the colliding object is the tomatos object
-        if (collision.gameObject == tomatosCollisionObject)
+        if (collision.gameObject == tomatosCollisionObject && isBoardTilted)
         {
             Debug.Log("tomato");
-
             tomatosObject.SetActive(true);
         }
 
-        // Check if the colliding object is the greens object
-        if (collision.gameObject == greensCollisionObject)
+        if (collision.gameObject == greensCollisionObject && isBoardTilted)
         {
             Debug.Log("green");
             greensObject.SetActive(true);
+        }
+
+        if (collision.gameObject == choppingBoard && isBoardTilted)
+        {
+            Debug.Log("all");
+            greensObject.SetActive(true);
+            tomatosObject.SetActive(true);
+            carrotsObject.SetActive(true);
         }
     }
 }

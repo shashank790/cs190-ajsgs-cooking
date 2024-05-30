@@ -941,6 +941,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crossSectionMaterial: {fileID: -3846018093981099296, guid: 1c046e1d4fe2b417cb7850e6e5426e75, type: 3}
   knife: {fileID: 1804115645116042}
+  choppingBoard: {fileID: 0}
+  smoothingFactor: 0.1
 --- !u!1 &91478119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,7 +1870,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 105}
+  m_AnchoredPosition: {x: -1, y: 101}
   m_SizeDelta: {x: 770, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &181229880
@@ -1893,8 +1895,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Step 4: Head back to the chopping board, ensure the knife is placed securely
     off the board. Take the board with the chopped vegetables on it and walk over
-    to the pan. Tip the board to transfer the chopped vegetables into the pan. Once
-    you have done that to your satisfaction, you can select ''Proceed to Step 5''.'
+    to the pan, hold steadily or else the vegetables may drop. Tip the board to transfer
+    the chopped vegetables into the pan. Once you have done that to your satisfaction,
+    you can select ''Proceed to Step 5''.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1921,8 +1924,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 21
+  m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2858,6 +2861,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crossSectionMaterial: {fileID: -6478536213147159724, guid: cb10480ce1a40437796a4a0eb8d0d498, type: 3}
   knife: {fileID: 1804115645116042}
+  choppingBoard: {fileID: 0}
+  smoothingFactor: 0.1
 --- !u!64 &297134037
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2894,6 +2899,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crossSectionMaterial: {fileID: -6478536213147159724, guid: 60cdb6d3b264a4649a5e20e4d1397f6b, type: 3}
   knife: {fileID: 1804115645116042}
+  choppingBoard: {fileID: 4746999001225929}
+  smoothingFactor: 0.1
 --- !u!114 &303699655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3445,7 +3452,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364578160}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e988983f96fe1dd48800bcdfc82f23e9, type: 3}
   m_Name: 
@@ -5397,6 +5404,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crossSectionMaterial: {fileID: -3846018093981099296, guid: 1c046e1d4fe2b417cb7850e6e5426e75, type: 3}
   knife: {fileID: 1804115645116042}
+  choppingBoard: {fileID: 4746999001225929}
+  smoothingFactor: 0.1
 --- !u!114 &503314256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6699,7 +6708,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712900736}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e988983f96fe1dd48800bcdfc82f23e9, type: 3}
   m_Name: 
@@ -7811,6 +7820,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crossSectionMaterial: {fileID: -6478536213147159724, guid: 60cdb6d3b264a4649a5e20e4d1397f6b, type: 3}
   knife: {fileID: 1804115645116042}
+  choppingBoard: {fileID: 0}
+  smoothingFactor: 0.1
 --- !u!1 &773190229
 GameObject:
   m_ObjectHideFlags: 0
@@ -10105,7 +10116,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
@@ -10144,6 +10155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crossSectionMaterial: {fileID: -3846018093981099296, guid: 60cdb6d3b264a4649a5e20e4d1397f6b, type: 3}
   knife: {fileID: 1804115645116042}
+  choppingBoard: {fileID: 4746999001225929}
+  smoothingFactor: 0.1
 --- !u!114 &1081365014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13501,6 +13514,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crossSectionMaterial: {fileID: -3846018093981099296, guid: 60cdb6d3b264a4649a5e20e4d1397f6b, type: 3}
   knife: {fileID: 1804115645116042}
+  choppingBoard: {fileID: 0}
+  smoothingFactor: 0.1
 --- !u!1 &1396885910
 GameObject:
   m_ObjectHideFlags: 0
@@ -17110,6 +17125,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crossSectionMaterial: {fileID: -6478536213147159724, guid: 60cdb6d3b264a4649a5e20e4d1397f6b, type: 3}
   knife: {fileID: 1804115645116042}
+  choppingBoard: {fileID: 0}
+  smoothingFactor: 0.1
 --- !u!1 &1937873047
 GameObject:
   m_ObjectHideFlags: 0
@@ -18490,6 +18507,7 @@ GameObject:
   - component: {fileID: 1061123975}
   - component: {fileID: 1061123974}
   - component: {fileID: 1061123977}
+  - component: {fileID: 33954769874254293}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -19294,6 +19312,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443104658110085}
   m_Mesh: {fileID: 4300000, guid: 647a44dda97f8a44a86319c533206b48, type: 3}
+--- !u!65 &33954769874254293
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443104658110085}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9755809, y: 0.054313485, z: 1.5991951}
+  m_Center: {x: -5.593337e-17, y: -9.313225e-10, z: -0.005367221}
 --- !u!108 &36953241687345017
 Light:
   m_ObjectHideFlags: 0
@@ -20437,7 +20476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &735756256310890553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20624,7 +20663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &911004941316510811
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22731,7 +22770,6 @@ GameObject:
   - component: {fileID: 1081365015}
   - component: {fileID: 1081365014}
   - component: {fileID: 1081365013}
-  - component: {fileID: 4315500327232063197}
   m_Layer: 0
   m_Name: Broccoli (1)
   m_TagString: greens
@@ -22986,13 +23024,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3388152909443670873}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.041, y: 0.9716, z: 0.838}
+  m_LocalRotation: {x: 0.06162845, y: 0.70441604, z: -0.06162845, w: 0.70441604}
+  m_LocalPosition: {x: -0.0368, y: 0.969, z: 0.838}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 90, z: 0}
 --- !u!4 &2616296380276356431
 Transform:
   m_ObjectHideFlags: 0
@@ -23530,7 +23568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &2761686674904782024
 GameObject:
   m_ObjectHideFlags: 0
@@ -24316,7 +24354,7 @@ Transform:
   m_GameObject: {fileID: 2369809154745329417}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2867882, y: 0.49673173, z: 0.40957606, w: 0.70940655}
-  m_LocalPosition: {x: 0.0608, y: 0.945, z: 0.8596}
+  m_LocalPosition: {x: 0.0658, y: 0.9428, z: 0.8515}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24638,7 +24676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &3192260970218737289
 GameObject:
   m_ObjectHideFlags: 0
@@ -25064,7 +25102,6 @@ GameObject:
   - component: {fileID: 503314257}
   - component: {fileID: 503314256}
   - component: {fileID: 503314255}
-  - component: {fileID: 3748647930588234381}
   m_Layer: 0
   m_Name: Tomato (1)
   m_TagString: tomatos
@@ -25578,20 +25615,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3748647930588234381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3388152909443670873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d283d782fe5d24e01a2f824251f413d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  choppingBoard: {fileID: 1443104658110085}
-  vegetable: {fileID: 3388152909443670873}
 --- !u!23 &3748647930972392992
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26536,6 +26559,7 @@ MonoBehaviour:
   carrotsCollisionObject: {fileID: 4333536560776646955}
   tomatosCollisionObject: {fileID: 3388152909443670873}
   greensCollisionObject: {fileID: 2369809154745329417}
+  choppingBoard: {fileID: 1443104658110085}
 --- !u!65 &3985065547795302842
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26555,7 +26579,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3748977, y: 0.19999999, z: 0.2}
+  m_Size: {x: 0.4, y: 0.2, z: 0.2}
   m_Center: {x: -0.060330886, y: 0.05000003, z: 0.000000021806182}
 --- !u!4 &3992441233492593553
 Transform:
@@ -26565,13 +26589,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4333536560776646955}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5213339, y: 0.5213339, z: 0.4777144, w: 0.4777144}
-  m_LocalPosition: {x: -0.123, y: 0.9265, z: 0.8306}
+  m_LocalRotation: {x: 0.6408564, y: 0.29883626, z: 0.29883626, w: 0.6408564}
+  m_LocalPosition: {x: -0.1402, y: 0.9379, z: 0.8306}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 95, z: 90}
+  m_LocalEulerAnglesHint: {x: 40, y: 90, z: 90}
 --- !u!4 &3992441234787842475
 Transform:
   m_ObjectHideFlags: 0
@@ -26751,7 +26775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4187066322601034721
 Transform:
   m_ObjectHideFlags: 0
@@ -26986,20 +27010,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4315500327232063197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2369809154745329417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d283d782fe5d24e01a2f824251f413d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  choppingBoard: {fileID: 1443104658110085}
-  vegetable: {fileID: 2369809154745329417}
 --- !u!1 &4333536560776646955
 GameObject:
   m_ObjectHideFlags: 0
@@ -27011,11 +27021,10 @@ GameObject:
   - component: {fileID: 3992441233492593553}
   - component: {fileID: 56255083871847476}
   - component: {fileID: 2820147246214754558}
-  - component: {fileID: 8985614805528106379}
+  - component: {fileID: 8985614805528106380}
   - component: {fileID: 303699656}
   - component: {fileID: 303699655}
   - component: {fileID: 303699654}
-  - component: {fileID: 8985614805528106380}
   m_Layer: 0
   m_Name: Carrot (1)
   m_TagString: carrots
@@ -27106,7 +27115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &4374079297806185625
 GameObject:
   m_ObjectHideFlags: 0
@@ -27667,7 +27676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &4587495462680375425
 GameObject:
   m_ObjectHideFlags: 0
@@ -30554,7 +30563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6371765446766940218
 Transform:
   m_ObjectHideFlags: 0
@@ -30824,7 +30833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6540216696449575826
 Transform:
   m_ObjectHideFlags: 0
@@ -33857,7 +33866,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.06098923, y: 0.32235903, z: 0.056980006}
   m_Center: {x: 0.0067760115, y: 0.041120384, z: 0.004741449}
---- !u!65 &8985614805528106379
+--- !u!65 &8985614805528106380
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33876,22 +33885,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.06098923, y: 0.32235903, z: 0.056980006}
-  m_Center: {x: 0.0067760115, y: 0.041120384, z: 0.004741449}
---- !u!114 &8985614805528106380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4333536560776646955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d283d782fe5d24e01a2f824251f413d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  choppingBoard: {fileID: 1443104658110085}
-  vegetable: {fileID: 4333536560776646955}
+  m_Size: {x: 0.060989294, y: 0.3223591, z: 0.056980066}
+  m_Center: {x: 0.0067760074, y: 0.041120395, z: 0.0047414443}
 --- !u!23 &9008558172732415695
 MeshRenderer:
   m_ObjectHideFlags: 0
