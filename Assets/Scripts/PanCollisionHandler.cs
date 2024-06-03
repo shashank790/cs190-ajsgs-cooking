@@ -60,6 +60,10 @@ public class PanCollisionHandler : MonoBehaviour
             StartCoroutine(FillSoup(bowlTomatoObject, 0.5f));
             StartCoroutine(FillSoup(bowlCarrotObject, 0.5f));
             StartCoroutine(FillSoup(bowlGreenObject, 0.5f));
+            panSoupObject.SetActive(false);
+            tomatoObject.SetActive(false);
+            carrotObject.SetActive(false);
+            greenObject.SetActive(false);
         }
     }
 
