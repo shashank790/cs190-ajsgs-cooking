@@ -28,6 +28,8 @@ public class PanCollisionHandler : MonoBehaviour
     // Duration of the pouring effect
     public float pouringDuration = 2.0f; // Duration in seconds
 
+    // AudioSource for pouring sound
+    public AudioSource pouringAudioSource;
     private bool isPouring = false;
 
     void Start()
@@ -113,7 +115,18 @@ public class PanCollisionHandler : MonoBehaviour
             pouringEffect.Play();
         }
 
+        // Play the pouring sound
+        if (pouringAudioSource != null)
+        {
+            pouringAudioSource.Play();
+        }
+
         yield return new WaitForSeconds(duration);
+
+        if (pouringEffect != null)
+        {
+            pouringEffect.Stop();
+        }
 
         if (pouringEffect != null)
         {

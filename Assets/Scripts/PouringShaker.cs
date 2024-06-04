@@ -5,6 +5,7 @@ public class PouringShaker : MonoBehaviour
     public ParticleSystem saltParticleSystem; // Reference to the particle system
     public Transform shakerEnd; // Reference to the end of the shaker
     public float pourAngleThreshold = 45f; // Angle threshold to start pouring
+    public AudioSource pouringAudioSource; // Reference to the AudioSource for pouring sound
 
     private ParticleSystem.EmissionModule emissionModule;
 
@@ -31,11 +32,21 @@ public class PouringShaker : MonoBehaviour
         {
             // Enable particle emission
             emissionModule.enabled = true;
+            // Play the pouring sound if not already playing
+            if (!pouringAudioSource.isPlaying)
+            {
+                pouringAudioSource.Play();
+            }
         }
         else
         {
             // Disable particle emission
             emissionModule.enabled = false;
+            // Stop the pouring sound if it is playing
+            if (pouringAudioSource.isPlaying)
+            {
+                pouringAudioSource.Stop();
+            }
         }
 
         // Update the position of the particle system to the end of the shaker

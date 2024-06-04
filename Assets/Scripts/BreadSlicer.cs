@@ -10,6 +10,7 @@ public class BreadSlicer : MonoBehaviour
     public GameObject knife; // Reference to the knife object
     public Transform choppingBoard; // Reference to the chopping board
     public float smoothingFactor = 0.1f; // Smoothing factor for position and rotation
+    public AudioSource slicingAudioSource; // Reference to the AudioSource component
 
     private Vector3 initialPosition;
     private Quaternion initialRotation;
@@ -23,6 +24,11 @@ public class BreadSlicer : MonoBehaviour
         {
             initialPosition = choppingBoard.InverseTransformPoint(transform.position);
             initialRotation = Quaternion.Inverse(choppingBoard.rotation) * transform.rotation;
+        }
+
+        if (slicingAudioSource != null)
+        {
+            slicingAudioSource.loop = true; // Ensure the audio source is set to loop
         }
     }
 
@@ -50,11 +56,28 @@ public class BreadSlicer : MonoBehaviour
         if (other.gameObject == knife && !isSliced)
         {
             Debug.Log("Knife has collided with the bread.");
+            // Start playing the slicing sound
+            if (slicingAudioSource != null && !slicingAudioSource.isPlaying)
+            {
+                slicingAudioSource.Play();
+            }
             // Perform the slice
             SliceBread();
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == knife)
+        {
+            Debug.Log("Knife has exited the bread.");
+            // Stop playing the slicing sound
+            if (slicingAudioSource != null && slicingAudioSource.isPlaying)
+            {
+                slicingAudioSource.Stop();
+            }
+        }
+    }
     private void SliceBread()
     {
         // Mark as sliced to prevent further slicing
@@ -72,7 +95,8 @@ public class BreadSlicer : MonoBehaviour
         SlicedHull slicedHull = gameObject.Slice(knifePosition, knifeDirection, crossSectionMaterial);
 
         if (slicedHull != null)
-        {
+        {   
+            
             Debug.Log("SlicedHull is not null, creating sliced objects.");
 
             // Create the sliced halves
@@ -91,7 +115,20 @@ public class BreadSlicer : MonoBehaviour
             AddComponentsToHull(lowerHull);
 
             // Destroy the original object
-            Destroy(gameObject);
+            //Destroy(gameObject);
+
+            // Disable the original object's mesh and collider
+            MeshRenderer originalMeshRenderer = GetComponent<MeshRenderer>();
+            if (originalMeshRenderer != null)
+            {
+                originalMeshRenderer.enabled = false;
+            }
+
+            Collider originalCollider = GetComponent<Collider>();
+            if (originalCollider != null)
+            {
+                originalCollider.enabled = false;
+            }
         }
         else
         {
@@ -118,6 +155,7 @@ public class BreadSlicer : MonoBehaviour
         breadSlicer.crossSectionMaterial = crossSectionMaterial;
         breadSlicer.knife = knife;
         breadSlicer.choppingBoard = choppingBoard; // Pass the chopping board reference
+        breadSlicer.slicingAudioSource = slicingAudioSource; // Pass the AudioSource reference
 
         // Store the initial transformation relative to the chopping board
         breadSlicer.initialPosition = choppingBoard.InverseTransformPoint(hull.transform.position);

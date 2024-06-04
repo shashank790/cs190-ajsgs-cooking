@@ -27,6 +27,7 @@ public class cooking_soup : MonoBehaviour
     // Duration of the pouring effect
     public float pouringDuration = 2.0f; // Duration in seconds
     private bool isPouring = false;
+    public AudioSource pouringAudioSource;
 
     void Start()
     {
@@ -145,6 +146,12 @@ public class cooking_soup : MonoBehaviour
             pouringEffect.Play();
         }
 
+        // Play the pouring sound
+        if (pouringAudioSource != null)
+        {
+            pouringAudioSource.Play();
+        }
+
         yield return new WaitForSeconds(duration);
 
         if (pouringEffect != null)
@@ -152,6 +159,12 @@ public class cooking_soup : MonoBehaviour
             pouringEffect.Stop();
         }
 
+        // Stop the pouring sound
+        if (pouringAudioSource != null)
+        {
+            pouringAudioSource.Stop();
+        }
+        
         isPouring = false;
     }
 
