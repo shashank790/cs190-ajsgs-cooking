@@ -29,9 +29,9 @@ Welcome to the VR Cooking Simulator! Our project features interactive elements s
   - The particles will emit from the end of the shaker, simulating the pouring action.
 
 ## Controls
-- **Movement:** Use the thumbstick on the left controller to move around.
+- **Movement:** You need to physically walk around to move within the VR environment. Our game mainly relies on the grab functionality for almost all aspects so that the user is accustomed to a mode of interaction with the system.
 - **Interact/Grab:**
-  - **Grip Button:** Pick up and hold objects (e.g., knife, chopping board, salt shaker, pepper shaker, knife). This button is predominantly used for all actions within our game, even to select text canvas transitions.
+  - **Grip Button:** Pick up and hold objects (e.g., knife, chopping board, salt shaker, pepper shaker, pan, bowl, stirring spoon etc). This button is predominantly used for all actions within our game, even to select text canvas transitions.
 - **Tilt/Pour:**
   - Tilt the shakers to pour salt or pepper when the tilt angle exceeds 45 degrees.
 - **Vegetable Slicing:**
