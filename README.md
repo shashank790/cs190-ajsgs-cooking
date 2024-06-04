@@ -1,4 +1,4 @@
-# Team 3 - AJSGS:
+# Team 3 - AJSGS
 
 Welcome to the VR Cooking Simulator! Our project is a tutorial for beginner cooks to learn to make vegetable soup. Some of the aspects that it features are interactive elements such as a vegetable slicing mechanic with realistic audio feedback, salt and pepper shakers that pour particles when tilted, and stirring the soup in the pan. This guide will walk you through understanding the controls and getting the most out of your VR cooking experience.
 
