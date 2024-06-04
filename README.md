@@ -43,9 +43,6 @@ Welcome to the VR Cooking Simulator! Our project features interactive elements s
 - **Particle Emission:** Particle systems might need fine-tuning for optimal visual effects.
 
 
-=======
->>>>>>> f29a45a (final)
-
 # HW4 Writeup:
 Welcome to the VR Cooking Simulator! Our project features interactive elements such as a vegetable slicing mechanic with realistic audio feedback, salt and pepper shakers that pour particles when tilted. This guide will walk you through setting up the project, understanding the controls, and getting the most out of your VR cooking experience.
 
