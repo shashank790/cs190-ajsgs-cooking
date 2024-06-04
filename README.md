@@ -25,7 +25,7 @@ Welcome to the VR Cooking Simulator! Our project features interactive elements s
 - **Objective:** Pour salt and pepper particles from the respective shakers.
 - **Mechanics:**
   - Pick up the salt or pepper shaker using the grip button on your controller.
-  - Tilt the shaker past a certain angle (45 degrees) to start pouring the particles.
+  - Tilt the shaker past a certain angle (65 degrees) to start pouring the particles.
   - The particles will emit from the end of the shaker, simulating the pouring action.
 
 ## Controls
