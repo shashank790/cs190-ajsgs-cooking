@@ -42,3 +42,4 @@ Welcome to the VR Cooking Simulator! Our project is a tutorial for beginner cook
 ## Known Issues (not enough time to resolve these)
 - **Lag when Slicing:** The setup requires some form of optimization to avoid lagging instances within the VR environment. This lag is not experienced in Unity's editor but mainly only when running the game on the VR.
 - **Particle Emission:** Particle systems might need fine-tuning for optimal visual effects.
+- **Text Canvas Inconsistencies:** If the step by step guidelines aren't followed as provided, their may be issues with how the canvases update. We were unable to resolve this due to time constraint. Users must follow the guidelines provided for the best possible experience.
