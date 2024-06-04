@@ -7,7 +7,7 @@ Welcome to the VR Cooking Simulator! Our project is a tutorial for beginner cook
 ### Text Canvases
 - **Objective:** Display informative text within the VR environment to guide the user's actions.
 - **Mechanics:**
-  - Text canvases are placed within the VR scene to provide instructions or feedback, allows for user's to proceed at their own pace. We give a sense of autonomy and control to the user by utilizing these canvases.
+  - Text canvases are placed within the VR scene to provide instructions or feedback, allows for users to proceed at their own pace. We give a sense of autonomy and control to the user by utilizing these canvases.
   - Interactive rays are shown when the user hovers over the continue or proceed buttons so that the user is aware that they can transition to the next canvas by grabbing the respective button.
 
 ### Vegetable Slicing
