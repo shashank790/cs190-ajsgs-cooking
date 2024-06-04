@@ -31,7 +31,8 @@ Welcome to the VR Cooking Simulator! Our project features interactive elements s
 ## Controls
 - **Movement:** You need to physically walk around to move within the VR environment. Our game mainly relies on the grab functionality for almost all aspects so that the user is accustomed to a mode of interaction with the system.
 - **Interact/Grab:**
-  - **Grip Button:** Pick up and hold objects (e.g., knife, chopping board, salt shaker, pepper shaker, pan, bowl, stirring spoon etc). This button is predominantly used for all actions within our game, even to select text canvas transitions.
+  - **Grip Button:** Pick up and hold objects (e.g., knife, chopping board, salt shaker, pepper shaker, pan, bowl, stirring spoon etc). This button is predominantly used for all actions within our game, even to select text canvas transitions. The image here shows where the grab button is on the controller: ![Help Center Article Background - 2023-07-12T153655 882](https://github.com/shashank790/cs190-ajsgs-cooking/assets/114948179/522bb61a-5018-44fd-8d34-9bac803bf084)
+
 - **Tilt/Pour:**
   - Tilt the shakers to pour salt or pepper when the tilt angle exceeds 45 degrees.
  
