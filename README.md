@@ -1,16 +1,13 @@
-# Team_AJSGS_Scene (HW3):
-To move around in the scene, we have decided to use teleportation. You can move the left and right controllers around and point at the different mats on the floor to teleport. 
-<img width="1420" alt="Screenshot 2024-06-03 at 9 25 32 PM" src="https://github.com/shashank790/cs190-ajsgs-cooking/assets/114948179/fb3d192e-42e6-4831-9be4-e2b940ad9ef1">
+# Team 3 - AJSGS:
 
-# HW4 Writeup:
-Welcome to the VR Cooking Simulator! Our project features interactive elements such as a vegetable slicing mechanic with realistic audio feedback, salt and pepper shakers that pour particles when tilted. This guide will walk you through setting up the project, understanding the controls, and getting the most out of your VR cooking experience.
+Welcome to the VR Cooking Simulator! Our project is a tutorial for beginner cooks to learn to make vegetable soup. Some of the aspects that it features are interactive elements such as a vegetable slicing mechanic with realistic audio feedback, salt and pepper shakers that pour particles when tilted, and stirring the soup in the pan. This guide will walk you through understanding the controls and getting the most out of your VR cooking experience.
 
 ## Gameplay Instructions
 
 ### Text Canvases
 - **Objective:** Display informative text within the VR environment to guide the user's actions.
 - **Mechanics:**
-  - Text canvases are placed within the VR scene to provide instructions or feedback.
+  - Text canvases are placed within the VR scene to provide instructions or feedback, allows for user's to proceed at their own pace. We give a sense of autonomy and control to the user by utilizing these canvases.
   - Interactive rays are shown when the user hovers over the continue or proceed buttons so that the user is aware that they can transition to the next canvas by grabbing the respective button.
 
 ### Vegetable Slicing
@@ -21,6 +18,12 @@ Welcome to the VR Cooking Simulator! Our project features interactive elements s
   - An audio clip of slicing will play to enhance realism.
   - The vegetables will be sliced in a realistic manner, which you can further interact with.
 
+### Soup Pouring and Stirring
+- **Objective:** Provide a realistic experience for the user to actually cook the soup.
+- **Mechanics:**
+  - Pour the soup from the mixture into the pan or from the pan into the bowl.
+  - Grab the stirring spoon to stir the soup and vegetables when they are in the pan.
+    
 ### Salt and Pepper Shakers
 - **Objective:** Pour salt and pepper particles from the respective shakers.
 - **Mechanics:**
