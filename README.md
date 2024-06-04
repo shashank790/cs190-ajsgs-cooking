@@ -27,6 +27,15 @@ Welcome to the VR Cooking Simulator! Our project features interactive elements s
   - Pick up the salt or pepper shaker using the grip button on your controller.
   - Tilt the shaker past a certain angle (45 degrees) to start pouring the particles.
   - The particles will emit from the end of the shaker, simulating the pouring action.
+  - An audio clip of shaker pouring will play to enhance realism.
+
+### Soup Pouring
+- **Objective:** Pour soup from the mixture to the pan to the bowl.
+- **Mechanics:**
+  - Pick up the soup mixture or pan shaker using the grip button on your controller.
+  - Tilt the mixture/pan past a certain angle (20 degrees) to start pouring the soup.
+  - The particles will emit from the end of the respective item, simulating the pouring action.
+  - An audio clip of soup pouring will play to enhance realism.
 
 ## Controls
 - **Movement:** Use the thumbstick on the left controller to move around.
