@@ -11,6 +11,7 @@ Welcome to the VR Cooking Simulator! Our project features interactive elements s
 - **Objective:** Display informative text within the VR environment to guide the user's actions.
 - **Mechanics:**
   - Text canvases are placed within the VR scene to provide instructions or feedback.
+  - Interactive rays are shown when the user hovers over the continue or proceed buttons so that the user is aware that they can transition to the next canvas by grabbing the respective button.
 
 ### Vegetable Slicing
 - **Objective:** Slice the vegetables using the knife provided.
