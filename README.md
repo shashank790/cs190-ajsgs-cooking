@@ -34,8 +34,6 @@ Welcome to the VR Cooking Simulator! Our project features interactive elements s
   - **Grip Button:** Pick up and hold objects (e.g., knife, chopping board, salt shaker, pepper shaker, pan, bowl, stirring spoon etc). This button is predominantly used for all actions within our game, even to select text canvas transitions.
 - **Tilt/Pour:**
   - Tilt the shakers to pour salt or pepper when the tilt angle exceeds 45 degrees.
-- **Vegetable Slicing:**
-  - Bring the knife into contact with the bread to slice it
  
 ## Known Issues (not enough time to resolve these)
 - **Lag when Slicing:** The setup requires some form of optimization to avoid lagging instances within the VR environment. This lag is not experienced in Unity's editor but mainly only when running the game on the VR.
